@@ -34,6 +34,7 @@ font-size: 20px;
 .footer {
     grid-area: footer;
     margin-top: 20px;
+    background-color: aquamarine;
 }
 .footer ul{
     display: flex;
