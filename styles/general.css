@@ -31,3 +31,17 @@ font-size: 20px;
     top: 0;
     
 }
+.footer {
+    grid-area: footer;
+    margin-top: 20px;
+}
+.footer ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+}
+.footer-img{
+    height: 30px;
+    width: auto;
+}
