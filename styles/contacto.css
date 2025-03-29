@@ -1,0 +1,44 @@
+form{
+    
+display:flex;
+flex-direction: row;
+display: grid;
+grid-template-columns: 150px;
+padding-left: 600px;
+padding-top: 100px;
+color: rgb(2, 126, 126);
+font-family:cursive
+}
+
+    
+
+.redes{display:flex;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 150px;
+    color: rgb(3, 107, 107);
+
+}
+
+h1{
+    margin-left: 380px;
+    font-size:50px;
+    
+    color: rgb(3, 109, 109);
+    font-family: cursive;
+}
+h2{
+    margin-left: 550px;
+    padding-top: 100px;
+    color: rgb(4, 168, 168);
+    font-family: cursive;
+    font-size: 40px;
+}
+p{
+    margin-left:560px;
+    margin-right: 480px;
+    
+    color: rgb(2, 129, 129);
+    font-size: 30px;
+    font-family: cursive;
+}
