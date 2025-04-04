@@ -101,21 +101,18 @@ body {
 
 }
 
-.sub-menu:checked+.misma {
-    display: block;
-}
-
-.sub-menu {
-    /* display: none; */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-}
-
-.misma {
-    display: none;
-}
 footer{
     background-color: aquamarine;
+}
+
+/* .horario{
+    scroll-margin-top: 70px;
+} */
+
+.horario::before{
+    content: '';
+    display: block;
+    height: 67px;
+    margin-top: -67px;
+    visibility: hidden;
 }

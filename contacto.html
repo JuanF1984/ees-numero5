@@ -2,16 +2,29 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="styles/contacto.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="assets/img/school-solid.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="cursos.html">
+    <link rel="stylesheet" href="proyectos.html">
 </head>
 
 <body>
+    <header class="header">
+        <a href="index.html" class="logo-a"><img src="logo-escuela9.jpg" alt="" class="logo"></a>
+        <nav>
+            <ul class="nav">
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+        </nav>
 
+    </header>
     <h1> ESCUELA SECUNDARIA N°9 </h1>
     <h2> CONTACTANOS </h2>
     <P> Nuestos horarios de atención son de lunes a viernes de 8:00  a 12:00 hs.
@@ -28,7 +41,7 @@
         <label for="dni"> DNI </label>
         <input type="text" name="dni" id="dni">
         <label for="genero"> Género </label>
-        <select name="genero" id="genero"> 
+        <select name="genero" id="genero">
             <option value="femenino"> Femenino </option>
             <option value="masculino"> Masculino </option>
             <option value="otro"> Otro </option>
