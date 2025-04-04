@@ -11,7 +11,7 @@
     font-size: 30px;
     font-family: cursive;
     margin-left: 400px;
-    color: rgb(6, 194, 194);
+    color: rgb(1, 59, 59);
 }
 .todos{
     font-size: 30px;
@@ -28,33 +28,14 @@
     margin-left: 100px;
     margin-right: 100px;
 }
-.imgcompost{
-    width: 300px;
-    height: auto;
-    margin-left: 400px;
-    }
-    .imgesi{
-        width: 300px;
-        height: auto;
-        margin-left: 400px;
-    }
-    .imgarbol{
-        width: 300px;
-        height: auto;
-        margin-left: 400px;
-    }
-    .imgsalud{
-        width: 300px;
-        height: auto;
-        margin-left: 400px;
-    }
+
     .proyectos:hover{
-        background-color: rgb(75, 245, 245);
+        background-color: rgb(176, 248, 248);
     }
     .todos:hover{
-        background-color: rgb(30, 233, 233);
+        background-color: rgb(186, 245, 245);
     }
     
     .tituloproyectos:hover{
-        background-color: rgb(49, 241, 241);
+        background-color: rgb(199, 243, 243);
     }
