@@ -1,0 +1,158 @@
+/* Estilos específicos para la página de proyectos */
+
+/* Contenedor principal de proyectos */
+.proyectos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Título principal */
+.proyectos-titulo {
+    font-size: 2.2rem;
+    color: rgb(4, 119, 119) !important;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-bottom: 3px solid rgba(4, 119, 119, 0.2);
+    transition: background-color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.proyectos-titulo:hover {
+    background-color: rgb(199, 243, 243);
+    border-radius: 8px;
+}
+
+/* Contenedor de la lista de proyectos */
+.proyectos-lista {
+    display: grid;
+    gap: 3rem;
+}
+
+/* Tarjeta de proyecto individual */
+.proyecto-card {
+    background-color: #f8feff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Título de proyecto */
+.proyecto-titulo {
+    font-size: 1.5rem;
+    color: rgb(3, 138, 138) !important;
+    padding: 1.5rem;
+    margin: 0;
+    background-color: rgba(186, 245, 245, 0.3);
+    transition: background-color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.proyecto-titulo:hover {
+    background-color: rgb(186, 245, 245);
+}
+
+/* Descripción de proyecto */
+.proyecto-descripcion {
+    font-size: 1.2rem;
+    color: rgb(2, 82, 82) !important;
+    padding: 1.5rem;
+    margin: 0;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor de imagen */
+.proyecto-imagen {
+    width: 100%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    /* Color gris claro para placeholder */
+    position: relative;
+    height: 250px;
+    /* Altura fija para el placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.proyecto-imagen img:hover {
+    transform: scale(1.03);
+}
+
+/* Estilo para placeholder cuando no hay imagen */
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+}
+
+.placeholder-image::after {
+    content: "Imagen del proyecto";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Media queries para responsividad */
+@media (min-width: 768px) {
+    .proyectos-lista {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .proyectos-titulo {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .proyectos-titulo {
+        font-size: 1.8rem;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .proyecto-titulo {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .proyecto-descripcion {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .proyectos-titulo {
+        font-size: 1.5rem;
+    }
+
+    .proyecto-card {
+        margin-bottom: 1.5rem;
+    }
+}

@@ -1,64 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <link rel="stylesheet" href="styles/contacto.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto - EES N° 9 Eva Duarte</title>
     <link rel="shortcut icon" href="assets/img/school-solid.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="cursos.html">
-    <link rel="stylesheet" href="proyectos.html">
+    <link rel="stylesheet" href="styles/contacto.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="index.html" class="logo-a"><img src="logo-escuela9.jpg" alt="" class="logo"></a>
-        <nav>
-            <ul class="nav">
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
+    <div class="container">
+        <header class="header">
+            <a href="index.html" class="logo-a">
+                <img src="logo-escuela9.jpg" alt="Logo Escuela N°9" class="logo">
+            </a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="cursos.html">Horarios</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contacto-container">
+            <h1 class="contacto-titulo">ESCUELA SECUNDARIA N°9</h1>
+
+            <h2 class="contacto-subtitulo">CONTÁCTANOS</h2>
+
+            <p class="contacto-info">
+                Nuestros horarios de atención son de lunes a viernes de 8:00 a 12:00 hs.<br>
+                Dirección: Avenida Scully Nº660
+            </p>
+
+            <form class="contacto-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" name="dni" id="dni" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero">Género</label>
+                    <select name="genero" id="genero">
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mail">Email</label>
+                    <input type="email" name="mail" id="mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" required></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="reset" class="btn-reset">Borrar</button>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </div>
+            </form>
+
+        </main>
+
+        <footer class="footer">
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100064027235699" target="_blank"><img
+                            src="facebook logo.webp" alt="Facebook" class="footer-img">Facebook</a></li>
+                <li><a href="https://www.instagram.com/escuela_secundaria_9/" target="_blank"><img
+                            src="instagram-logo.webp" alt="Instagram" class="footer-img">Instagram</a></li>
+                <li><a href="#"><img src="mail_logo.webp" alt="Email" class="footer-img"
+                            id="mail">Mail</a></li>
             </ul>
-        </nav>
-
-    </header>
-    <h1> ESCUELA SECUNDARIA N°9 </h1>
-    <h2> CONTACTANOS </h2>
-    <P> Nuestos horarios de atención son de lunes a viernes de 8:00  a 12:00 hs.
-       <br>  Dirección: Avenida Scully Nº660
-    </P>
-        
-    
-        
-       
-
-    <form>
-        <label for="nombre"> Nombre </label>
-        <input type="text" name="nombre" id="nombre">
-        <label for="dni"> DNI </label>
-        <input type="text" name="dni" id="dni">
-        <label for="genero"> Género </label>
-        <select name="genero" id="genero">
-            <option value="femenino"> Femenino </option>
-            <option value="masculino"> Masculino </option>
-            <option value="otro"> Otro </option>
-        </select>
-        <label for="mail"> Mail </label>
-        <input type="text" name="mail" id="mail">
-        <label for="mensaje"> Mensaje </label>
-        <input type="text" name="mensaje" id="mensaje">
-        <button type="submit"> Enviar </button>
-        <button type="reset"> Borrar </button>
-
-    </form>
-    <a href="https://www.facebook.com/profile.php?id=100064027235699" target="a-blamk" class="redes"> Facebook </a>
-    <a href="https://www.instagram.com/escuela_secundaria_9/" target="a-blamk" class="redes"> instagram </a>
-    
-    
-
+        </footer>
+    </div>
 </body>
 
 </html>

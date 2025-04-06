@@ -1,41 +1,160 @@
+/* Configuración del Grid Layout */
 .container-horario {
     display: grid;
     grid-template-areas:
         "header header header"
         "sidebar main main"
         "footer footer footer";
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 1rem;
 }
 
+/* Áreas del Grid */
 .header {
     grid-area: header;
-    position: sticky;
-    top: 10px;
 }
 
 .sidebar {
     grid-area: sidebar;
-    /* position: relative; */
+    padding: 1rem;
+    background-color: #f0f8ff;
+    border-right: 1px solid #e0e0e0;
 }
 
 .main {
     grid-area: main;
+    padding: 1rem 2rem;
 }
 
 .footer {
     grid-area: footer;
-    margin-top: 20px;
+
 }
-.footer ul{
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    justify-content: center;
-}
-.footer-img{
-    height: 30px;
+
+/* Estilos del Header */
+.logo {
+    height: 60px;
     width: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+.nav a {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.nav a:hover,
+.nav a.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    color: #333;
+}
+
+.nav a.active {
+    background-color: rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+}
+
+/* Estilos de la Barra Lateral */
+.side-nav-container {
+    position: sticky;
+    top: 100px;
+}
+
+.side-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin-bottom: 0.8rem;
+    transition: transform 0.2s ease;
+}
+
+.side-nav a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    background-color: lightseagreen;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.side-nav li:nth-child(odd) a {
+    background-color: deepskyblue;
+}
+
+.side-nav a:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las secciones de horario */
+.horario {
+    margin-bottom: 3rem;
+    padding-top: 80px;
+    /* Para compensar el header sticky */
+    margin-top: -80px;
+    /* Para ajustar la posición visual */
+    scroll-margin-top: 80px;
+    /* Para navegación por anclas */
+}
+
+.horario h2 {
+    background-color: #e0f7fa;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    color: #006064;
+    border-left: 5px solid #00bcd4;
+}
+
+.intro-section {
+    margin-bottom: 2rem;
+}
+
+.intro-section h1 {
+    color: rgb(14, 146, 146);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Estilos para las tablas */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    /* Asegura que el contenido no se corte */
 }
 
 table {
@@ -46,73 +165,112 @@ table {
 
 th,
 td {
-    border: 1px solid black;
-    padding: 8px;
-    /* text-align: left; */
-    border-radius: 4px;
+    padding: 0.8rem;
+    text-align: center;
+    border: none;
 }
 
 th {
-    background-color: cyan;
+    background-color: #00bcd4;
+    color: white;
+    font-weight: 600;
 }
 
-td {
-    background-color: aquamarine;
+th:first-child {
+    border-top-left-radius: 8px;
 }
 
-tr :hover {
-    background-color: cadetblue;
+th:last-child {
+    border-top-right-radius: 8px;
 }
 
-.side-nav {
-    font-size: 1.5em;
-    list-style: none;
-    padding: 10px;
-    position: sticky;
-    top: 100px;
-
+tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
 }
 
-.side-nav a {
-    text-decoration: none;
+tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
 }
 
-.side-nav li {
-    padding: 0.5em;
-    background-color: lightseagreen;
-    margin: 0.5em;
-    border-radius: 20px;
+thead tr {
     position: relative;
+    /* Cambiado de sticky a relative */
+    z-index: 5;
 }
 
-.side-nav li:nth-child(odd) {
-    background-color: deepskyblue;
+tbody tr:nth-child(odd) {
+    background-color: #e0f7fa;
 }
 
-body {
-    font-family: cursive;
+tbody tr:nth-child(even) {
+    background-color: #b2ebf2;
+}
+
+tbody tr:hover td {
+    background-color: #80deea;
+    transition: background-color 0.3s ease;
 }
 
 
-.logo {
-    height: 60px;
-    width: auto;
-    border-radius: 50%;
-
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+    .container-horario {
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 1fr 3fr;
+    }
 }
 
-footer{
-    background-color: aquamarine;
+@media (max-width: 768px) {
+    .container-horario {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+    .side-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .side-nav li {
+        margin-bottom: 0;
+    }
+
+    .side-nav a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+
+
+    .table-responsive {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+        border-radius: 0;
+    }
 }
 
-/* .horario{
-    scroll-margin-top: 70px;
-} */
+@media (max-width: 480px) {
+    .horario {
+        padding-top: 120px;
+        margin-top: -120px;
+    }
 
-.horario::before{
-    content: '';
-    display: block;
-    height: 67px;
-    margin-top: -67px;
-    visibility: hidden;
+    th,
+    td {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.8rem;
+    }
 }
