@@ -139,9 +139,6 @@ main {
     vertical-align: middle;
 }
 
-#mail {
-    border-radius: 50%;
-}
 
 /* Media queries para responsividad UNIFICADA */
 @media (max-width: 992px) {
